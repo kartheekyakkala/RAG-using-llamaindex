@@ -3,3 +3,5 @@ llama-index
 pypdf
 huggingface
 openai
+accelerate 
+bitsandbytes
