@@ -52,5 +52,5 @@ llm = HuggingFaceLLM(
 service_context = ServiceContext.from_defaults(llm=llm, embed_model="local:BAAI/bge-small-en-v1.5")
 vector_index = VectorStoreIndex.from_documents(documents, service_context=service_context)
 query_engine = vector_index.as_query_engine(response_mode="compact")
-response = query_engine.query("Hi?")
+response = query_engine.query("Can you please Summarize document?")
 display_response(response)
