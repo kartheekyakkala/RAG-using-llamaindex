@@ -6,10 +6,11 @@ from llama_index.llms import HuggingFaceLLM
 from llama_index import ServiceContext
 from llama_index import VectorStoreIndex
 
-url = "https://www.theverge.com/2023/9/29/23895675/ai-bot-social-network-openai-meta-chatbots"
-documents = BeautifulSoupWebReader().load_data([url])
+from llama_index import VectorStoreIndex, SimpleDirectoryReader
 
-#Without quantization, we will not be able to load the whole meta-llama/Llama-2-7b-chat-hf in the free tier of colab.
+documents = SimpleDirectoryReader("./data").load_data()  // replace the ./data with your document's directory path
+
+#Without quantization, the program consumes lot of memory, you can skip this if you have enough memory.
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.float16,
