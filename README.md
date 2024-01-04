@@ -9,4 +9,4 @@ Note: I have used LLmaIndex documentation to develop code, so some of the code h
 Below is the link to LLamaindex docs.
 https://gpt-index.readthedocs.io/en/stable/
 
-Place your docs in main.py and run the file to converse with the bot.
+Place your docs in "data" folder and run the file to converse with the bot.
